@@ -1,0 +1,22 @@
+WaterFlow project repair notes
+
+Changes made:
+1. Moved CustomerRepository.java into src/main/java/water_management/customer/ to match its package declaration.
+2. Moved WaterConnectionRepository.java into src/main/java/water_management/connection/ to match its package declaration.
+3. Corrected CustomerController.java to import water_management.customer.CustomerRepository.
+4. Removed duplicate/misplaced src/main/java/water_management/WaterConnection.java. The canonical entity remains at src/main/java/water_management/connection/WaterConnection.java.
+
+After extracting this project on Windows:
+Backend:
+  1. Start MySQL and confirm database connection settings in src/main/resources/application.properties.
+  2. Open terminal in the water-management folder.
+  3. Run: .\mvnw.cmd clean compile
+  4. If successful, run: .\mvnw.cmd spring-boot:run
+
+Frontend:
+  1. Open a terminal in water-management-frontend.
+  2. Run: npm install
+  3. Run: npm run build
+  4. Run: npm run dev
+
+Note: Java source/package and frontend TypeScript checks were reviewed. Backend Maven compilation could not be verified in this environment because Maven wrapper download was blocked by network access. Run the commands above on your computer to confirm the full build.

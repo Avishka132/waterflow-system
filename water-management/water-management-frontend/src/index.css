@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; min-height: 100%; width: 100%; }
+html { font-family: Inter, Arial, sans-serif; background: #f4f7fc; color: #172b4d; }
+body { min-width: 320px; min-height: 100vh; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid #93c5fd; outline-offset: 2px; }
+:root[data-theme="dark"] { color-scheme: dark; background: #111827; color: #e5e7eb; }
+:root[data-theme="dark"] body { background: #111827; color: #e5e7eb; }
+:root[data-theme="dark"] .main-area,
+:root[data-theme="dark"] .dashboard-content,
+:root[data-theme="dark"] .customers-page,
+:root[data-theme="dark"] .water-connections-page,
+:root[data-theme="dark"] .meter-readings-page,
+:root[data-theme="dark"] .bill-page,
+:root[data-theme="dark"] .payments-page,
+:root[data-theme="dark"] .reports-page,
+:root[data-theme="dark"] .settings-page { background: #111827; color: #e5e7eb; }
+:root[data-theme="dark"] .topbar,
+:root[data-theme="dark"] .panel,
+:root[data-theme="dark"] .stat-card,
+:root[data-theme="dark"] .settings-card,
+:root[data-theme="dark"] .payment-panel,
+:root[data-theme="dark"] .reports-data-panel { background: #1f2937; color: #e5e7eb; border-color: #374151; }
+:root[data-theme="dark"] h1, :root[data-theme="dark"] h2, :root[data-theme="dark"] h3,
+:root[data-theme="dark"] label, :root[data-theme="dark"] th { color: #f9fafb; }
+:root[data-theme="dark"] td, :root[data-theme="dark"] p, :root[data-theme="dark"] span { border-color: #374151; }
+:root[data-theme="dark"] input, :root[data-theme="dark"] select, :root[data-theme="dark"] textarea { background: #111827; color: #f9fafb; border-color: #4b5563; }

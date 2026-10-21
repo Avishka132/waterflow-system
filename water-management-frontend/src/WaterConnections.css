@@ -1,0 +1,429 @@
+
+.connections-page {
+  padding: 28px 34px;
+  color: #173455;
+}
+
+.connections-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.connections-heading h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.connections-heading p,
+.connections-toolbar p {
+  margin: 7px 0 0;
+  color: #8192aa;
+  font-size: 12px;
+}
+
+.connections-primary-button {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 17px;
+  background: #2879e8;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.connections-primary-button:hover {
+  background: #1766d0;
+}
+
+.connections-primary-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.connections-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.connections-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid #e5edf7;
+  border-radius: 12px;
+  background: white;
+}
+
+.connections-summary-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #eaf2ff;
+  color: #2879e8;
+  font-size: 23px;
+}
+
+.connections-summary-icon.active-icon {
+  background: #e6f8ef;
+  color: #168653;
+}
+
+.connections-summary-icon.inactive-icon {
+  background: #fff4e5;
+  color: #c17b18;
+}
+
+.connections-summary-card span,
+.connections-summary-card strong {
+  display: block;
+}
+
+.connections-summary-card span {
+  color: #8292a7;
+  font-size: 11px;
+}
+
+.connections-summary-card strong {
+  margin-top: 8px;
+  font-size: 25px;
+}
+
+.connections-panel {
+  overflow: hidden;
+  border: 1px solid #e5edf7;
+  border-radius: 13px;
+  background: white;
+  box-shadow: 0 3px 12px #1e3a5f08;
+}
+
+.connections-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px;
+  border-bottom: 1px solid #edf1f7;
+}
+
+.connections-toolbar h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.connections-search {
+  width: min(340px, 100%);
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #dfe7f2;
+  border-radius: 8px;
+  outline: none;
+  color: #263f60;
+  font: inherit;
+  font-size: 11px;
+}
+
+.connections-search:focus {
+  border-color: #2879e8;
+}
+
+.connections-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.connections-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.connections-table th {
+  padding: 14px 16px;
+  background: #f7f9fc;
+  color: #8190a5;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.connections-table td {
+  padding: 15px 16px;
+  border-bottom: 1px solid #edf1f7;
+  color: #536780;
+  font-size: 11px;
+}
+
+.connections-table td strong {
+  color: #203e60;
+}
+
+.connections-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.connection-status {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.status-active {
+  background: #e6f8ef;
+  color: #168653;
+}
+
+.status-inactive {
+  background: #fff0ed;
+  color: #c24c38;
+}
+
+.connection-status-button,
+.connection-refresh-button {
+  padding: 8px 10px;
+  border: 1px solid #dce7f5;
+  border-radius: 6px;
+  background: white;
+  color: #2879e8;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.connection-status-button:hover,
+.connection-refresh-button:hover {
+  background: #edf5ff;
+}
+
+.connections-message {
+  padding: 35px 15px;
+  color: #8493a8;
+  font-size: 12px;
+  text-align: center;
+}
+
+.connections-error {
+  margin: 14px 20px;
+  padding: 12px;
+  border: 1px solid #fecaca;
+  border-radius: 7px;
+  background: #fff1f2;
+  color: #b42318;
+  font-size: 11px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.connections-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px 20px;
+  border-top: 1px solid #edf1f7;
+  color: #8795a9;
+  font-size: 10px;
+}
+
+.connection-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 20px;
+  background: #102b5080;
+}
+
+.connection-modal {
+  width: 100%;
+  max-width: 500px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 25px;
+  border: 1px solid #e5edf7;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 20px 60px #102b5033;
+}
+
+.connection-modal-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.connection-modal-heading h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.connection-modal-heading p {
+  margin: 7px 0 0;
+  color: #8493a8;
+  font-size: 11px;
+}
+
+.connection-close-button {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 7px;
+  background: #f1f5fa;
+  color: #526985;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.connection-modal form > label {
+  display: block;
+  margin: 17px 0 8px;
+  color: #334b69;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.connection-modal form > input,
+.connection-modal form > select {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #dce5f0;
+  border-radius: 7px;
+  outline: none;
+  background: #fbfcfe;
+  color: #173455;
+  font: inherit;
+  font-size: 12px;
+}
+
+.connection-modal form > input:focus,
+.connection-modal form > select:focus {
+  border-color: #2879e8;
+  box-shadow: 0 0 0 3px #2879e81a;
+}
+
+.connection-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.connection-cancel-button {
+  padding: 11px 15px;
+  border: 1px solid #dce5f0;
+  border-radius: 8px;
+  background: white;
+  color: #fafbfc;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .connections-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .connections-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 17px;
+  }
+
+  .connections-search {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .connections-page {
+    padding: 20px 13px;
+  }
+
+  .connections-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .connection-modal {
+    padding: 20px;
+  }
+}
+
+.connection-date-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.connection-date-wrapper input[type="date"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 48px 12px 16px;
+  cursor: pointer;
+}
+
+.connection-calendar-button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.connection-calendar-button:hover {
+  background: #eef5ff;
+}
+
+/* Remove grey background from installation date */
+.connection-date-wrapper input[type="date"] {
+  background-color: #ffffff !important;
+  color: #17365d !important;
+  color-scheme: light;
+  border: 1px solid #d5dfec;
+}
+
+/* Hide the browser's default calendar icon */
+.connection-date-wrapper input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+  opacity: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Keep our custom calendar button */
+.connection-calendar-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
